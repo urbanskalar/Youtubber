@@ -46,6 +46,8 @@ if __name__ == "__main__":
         'outtmpl': './HQ/'+'%(title)s.%(ext)s',
         'fixup': 'detect_or_warn',
         'format': 'bestaudio/best',
+        #'username': 'email',
+        #'password': 'password',
         #'writethumbnail': True,
         'addmetadata': True,
         'extractaudio' : True,
@@ -56,6 +58,7 @@ if __name__ == "__main__":
         ],
         'logger': MyLogger(),
         'progress_hooks': [my_hook],
+        'cookiefile': 'cookies.txt'
     }
 
     YTdownload(HQ_opts)
